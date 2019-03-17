@@ -1,16 +1,16 @@
 #include <iostream>
-
+using namespace std;
 int main() {
   
-  int grade = 59;
+  int grade = 45;
   
-  if (grade >= 60) {
+  if (grade >= 50) {
     
-    std::cout << "Pass\n";
+    cout << "Pass\n";
     
   } else {
     
-    std::cout << "Fail\n";
+    cout << "Fail\n";
     
   }
   
