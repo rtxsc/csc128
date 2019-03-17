@@ -1,20 +1,20 @@
 #include <iostream>
-
+using namespace std;
 int main() {
   
-  double ph = 4.6;
+  double ph = 9; // initialize pH value 
   
   if (ph > 7) {
     
-    std::cout << "Basic\n";
+    cout << "Basic\n";
     
   } else if (ph < 7) {
     
-    std::cout << "Acidic\n";
+    cout << "Acidic\n";
     
   } else {
     
-    std::cout << "Neutral\n";
+    cout << "Neutral\n";
     
   } 
   
