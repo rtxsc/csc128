@@ -2,6 +2,13 @@
 
 ## Fundamentals of Computer Problem Solving | March - July 2019
 
+```
+git init
+git add .
+git commit -m "commit comment"
+git push -u origin master
+```
+
 #### Course Outline
 
 - [ ] [`2 Quiz`]()
