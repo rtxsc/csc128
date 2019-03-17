@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-  double ph = 9; // initialize pH value 
+  double ph = 7; // initialize pH value 
   
   if (ph > 7) {
     
