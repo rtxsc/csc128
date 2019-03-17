@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-  
   int grade = 45;
   
   if (grade >= 50) {
