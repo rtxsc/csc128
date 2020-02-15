@@ -1,5 +1,7 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-  std::cout << "Mohd Yazid!\n";
+  cout << "Mohd Yazid!\n";
+  cout << "I am your C++ Master!\n";
 }
