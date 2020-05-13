@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-  
+
   double height, weight, bmi;
 
   std::cout << "Type in your height (m): ";
@@ -13,7 +13,8 @@ int main() {
   bmi = weight / (height * height);
 
   std::cout << "Your BMI is " << bmi << "\n";
+  std::cout << "Thanks for using this calculator!" << endl;
 
   return 0;
-  
+
 }
