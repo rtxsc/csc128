@@ -15,14 +15,31 @@ e. Increase the value of count by 1.
 #include <iostream>
 using namespace std;
 
+
+int main(){
+  int count = 0;
+  float sum = 0,x,average;
+
+  while(true){
+      cout <<"Enter x:"; cin >> x;
+      if(x==0)
+        break;
+      sum = sum + x;
+      count++;
+  }
+  average = sum / count ;
+  cout << "Average:" << average << endl;
+}
+
+
+/*
 int main() {
 
   int count=0;
   float sum=0.0, x,average;
 
-  for(;;++count){
-    cout <<"Enter x:";
-    cin >> x;
+  for(; ; ++count){
+    cout <<"Enter x:"; cin >> x;
     if(x==0)
       break;
     sum = sum + x;
@@ -30,8 +47,5 @@ int main() {
   }
   average = sum / count;
   cout << "Average:" << average << endl;
-
-
-
-
 }
+*/

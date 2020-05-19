@@ -8,8 +8,11 @@
 */
 
 #include "iostream"
-
 using namespace std;
+
+// for loop method
+
+/*
 int main(){
 
     int i,j;
@@ -17,6 +20,23 @@ int main(){
       for(j = 0; j < i ; j++){
         cout << i-j << " ";
       }
+      cout << endl;
+    }
+}
+*/
+
+// while loop method
+
+int main(){
+
+    int i=5,j=0;
+    while(i>0){
+      while(j<i){
+          cout << i-j << " ";
+          j++;
+      }
+      i--;
+      j=0;
       cout << endl;
     }
 }
