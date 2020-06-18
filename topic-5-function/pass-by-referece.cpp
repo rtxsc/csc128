@@ -9,7 +9,7 @@ int main() {
   double y1= 21.0;
   int z1 = 10;
   int j = 20;
-  Bubble(x1,y1,z1,j);
+  Bubble(x1,y1,z1,j); //Bubble(double x, double& y, int i,int& j)
   cout << x1 << " " << y1 << " " << z1 << " " << j ;
 
   x1 = 1.5;
