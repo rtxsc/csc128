@@ -1,13 +1,14 @@
 #include <iostream>
+#include <ctype.h>
 using namespace std;
 
-char code, name, size, dOpt, nextCust;
+char code, name, pack_size, dOpt, nextCust;
 int qty, almondL, hnyC, semp;
 double price, totalPrice, totalSales, totalSold, dPrice;
 
 void resetVar() 
 	{
-	char name = 'x', size = 'x', nextCust = 'N', dOpt = 'x';                          // Cookies name, size & delivery option
+	char name = 'x', pack_size = 'x', nextCust = 'N', dOpt = 'x';                          // Cookies name, pack_size & delivery option
 	float totalPrice = 0.0;                                              // Declaration price according quantity
 	float calcD_opt = 0.0;                                                // Declaration price inlcuding delivery option
 	float price = 0, totalSold = 0, totalSales = 0, addPrice = 0;
@@ -17,9 +18,11 @@ void resetVar()
 
 int dFunc()
 		{
-		    char tmpSF = 's'; // s here stands for stop
+			char tmpSF;
 			do 
 			{
+				tmpSF = 's'; // s here stands for stop
+
 				cout << "\n\n-----------------------------------------------------------------" << endl;
 				cout << "CODE\t DELIVERY OPTION\t PRICE(RM)";  
 				cout << "\n-----------------------------------------------------------------" << endl;
@@ -28,7 +31,7 @@ int dFunc()
 				cout << "-----------------------------------------------------------------" << endl;
 				cout << "Enter delivery option : ";
 				cin >> dOpt;
-				cout << "/n";
+				cout << "\n";
 			
 				switch (dOpt)
 				{
@@ -45,17 +48,27 @@ int dFunc()
 						tmpSF = 'r'; // r here stands for restart
 						break;
 				}
+
+				if(tmpSF!='r'){
+					do{
+						cout << "Are you sure with your Delivery Option? Y or N:";
+						cin >> tmpSF; 
+						tmpSF = tolower(tmpSF);
+					}while(tmpSF!= 'y' && tmpSF!='n');
+					
+				}
+	
 			}
-			while (tmpSF == 'r');
+			while (tmpSF == 'r' || tmpSF == 'n');
 			
-			return qty;
+			return dPrice;
 		}
 
 int main () 
 {
 	//repetition for next customer
-	while (nextCust == 'N' || 'n')
-	{
+	
+	do{
 		// Display Meal
 		cout << "\n";
 		cout << "--------------------------------------------------------------------" << endl;
@@ -67,18 +80,18 @@ int main ()
 		cout << "--------------------------------------------------------------------" << endl;
 		cout << "ENTER TYPE OF COOKIE (A / H / S) : ";
 		cin >> code;
-		cout << "\nSELECT SIZE (L | M) : ";
-		cin >> size;
+		cout << "\nSELECT pack_size (L | M) : ";
+		cin >> pack_size;
 		
-			if (size == 'L' || 'l') {
+			if (pack_size == 'L' || pack_size =='l') {
 				price = 70.00;
 			}
 			
-			else if (size == 'M' || 'm') {
+			else if (pack_size == 'M' || pack_size =='m') {
 				price = 35.00;
 			}
 			else {
-				cout << "INVALID SIZE OPTION. PLEASE TRY AGAIN" << endl;
+				cout << "INVALID pack_size OPTION. PLEASE TRY AGAIN" << endl;
 			}
 			
 		cout << "\nENTER QUANTITY : ";
@@ -161,7 +174,7 @@ int main ()
 			{
 			break;
 			}
-	}
+	}while (nextCust == 'N' || nextCust =='n'); // corrected
 return 0;
 }
 
